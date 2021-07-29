@@ -7,7 +7,20 @@ describe DockingStation do
   it 'gets a working bike' do
    bike = subject.release_bike
    expect(bike).to be_working
-  end  
+  end
+  
+  it 'docks a bike' do
+    is_expected.to respond_to(:dock).with(1).argument
+  end
+
+
+  # we need to write a test that checks if the bike can be seen after its been docked
+  it 'shows docked bikes' do
+    bike = Bike.new
+    expect(subject.dock(bike)).to eq bike
+  end
+
+
 end
 
 

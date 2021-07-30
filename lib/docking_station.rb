@@ -11,11 +11,8 @@ class DockingStation
   end
 
   def dock(bike)
-    # do something here so that "bike" shows up in the attribute bike
+    fail "This dock is full" if @bike
     @bike = bike
+   
   end
-
-  # def bike
-  #   @bike
-  # end
 end
